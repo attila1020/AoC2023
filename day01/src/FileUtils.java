@@ -7,11 +7,9 @@ import java.util.List;
 
 public class FileUtils
 {
-    // input: a megnyitandó file neve
-    // output: egy List<String> objektum, ami az egyes sorokat tartalmazza
     public static List<String> readLines(String fileName)
     {
-        List<String> lines = new ArrayList<String>();
+        List<String> lines = new ArrayList<>();
 
         try
         {
@@ -25,12 +23,12 @@ public class FileUtils
         }
         catch (FileNotFoundException e)
         {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
             System.exit(1);
         }
         catch (IOException e)
         {
-            e.printStackTrace();
+            System.err.println(e.getMessage());
             System.exit(2);
         }
 

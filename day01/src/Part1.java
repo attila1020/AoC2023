@@ -5,7 +5,7 @@ public class Part1 {
 
         for (char c : inputString.toCharArray()) {
             if (Character.isDigit(c)) {
-                sb.append(c + "");
+                sb.append(c);
             }
         }
 
@@ -13,7 +13,7 @@ public class Part1 {
     }
 
     protected int getValue(String inputString) {
-        int value = 0;
+        int value;
         String result = "";
         var array = inputString.toCharArray();
         result += array[0];
