@@ -1,15 +1,7 @@
 public class Part1 {
 
     protected String filterString(String inputString) {
-        StringBuilder sb = new StringBuilder();
-
-        for (char c : inputString.toCharArray()) {
-            if (Character.isDigit(c)) {
-                sb.append(c);
-            }
-        }
-
-        return sb.toString();
+        return inputString.replaceAll("[^\\d]", "");
     }
 
     protected int getValue(String inputString) {
